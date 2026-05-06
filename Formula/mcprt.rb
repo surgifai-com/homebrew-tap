@@ -43,6 +43,6 @@ class Mcprt < Formula
   end
 
   test do
-    assert_match "mcprt", shell_output("#{bin}/mcprt --version 2>&1")
+    assert_match "mcprt manages MCP servers", shell_output("#{bin}/mcprt --help 2>&1")
   end
 end
