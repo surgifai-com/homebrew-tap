@@ -42,7 +42,7 @@ class Mcprt < Formula
   end
 
   def post_install
-    (share/"mcprt").install "com.mcprt.daemon.plist"
+    (share/"mcprt").install "contrib/launchd/com.mcprt.daemon.plist"
   end
 
   test do
