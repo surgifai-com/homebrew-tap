@@ -26,6 +26,7 @@ class Mcprt < Formula
 
   def install
     bin.install "mcprt"
+    (share/"mcprt").install "contrib/launchd/com.mcprt.daemon.plist"
   end
 
   def caveats
@@ -39,10 +40,6 @@ class Mcprt < Formula
       Config file: ~/.config/mcprt/mcprt.toml
       Docs: https://github.com/surgifai-com/mcprt
     EOS
-  end
-
-  def post_install
-    (share/"mcprt").install "contrib/launchd/com.mcprt.daemon.plist"
   end
 
   test do
